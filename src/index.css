@@ -1,0 +1,88 @@
+:root {
+  --bg-canvas: #f9f8f6;       /* Soft linen warm white */
+  --surface-card: #ffffff;    /* Pure crisp white card bases */
+  --text-main: #2d312e;       /* Deep charcoal slate for elegant typography */
+  --text-muted: #727a74;      /* Soft muted sage gray */
+  --pastel-green: #e2ede4;    /* Light sage accents */
+  --pastel-rose: #f7e1dd;     /* Soft warm clay/rose */
+  --pastel-accent: #e9e5ff;   /* Soft lavender hue */
+  --border-color: #eae8e3;    /* Clean, faint structural divider line */
+}
+
+body {
+  background-color: var(--bg-canvas);
+  color: var(--text-main);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+.premium-card {
+  background: var(--surface-card);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(45, 49, 46, 0.02);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.premium-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(45, 49, 46, 0.04);
+}
+
+.badge-sage {
+  background-color: var(--pastel-green);
+  color: #3b5241;
+  font-weight: 500;
+}
+
+.badge-rose {
+  background-color: var(--pastel-rose);
+  color: #6e463f;
+  font-weight: 500;
+}
+
+.custom-input {
+  background-color: #ffffff !important;
+  border: 1px solid var(--border-color) !important;
+  color: var(--text-main) !important;
+  border-radius: 8px;
+  padding: 0.6rem;
+}
+
+.custom-input:focus {
+  border-color: #b2c7b7 !important;
+  box-shadow: 0 0 0 3px rgba(178, 199, 183, 0.2) !important;
+}
+
+.action-btn-primary {
+  background-color: #3d4a41;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  padding: 0.6rem 1.2rem;
+  transition: background-color 0.2s;
+}
+
+.action-btn-primary:hover {
+  background-color: #2b352e;
+}
+@keyframes popIn {
+  0% { transform: scale(0.92); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.animate-pop {
+  animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+
+/* Subtle continuous gleam for completed components */
+.execution-burst {
+  background: linear-gradient(135deg, rgba(255,255,255,0) 0%, rgba(96,164,115,0.03) 50%, rgba(255,255,255,0) 100%);
+  animation: shimmer 3s infinite linear;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
